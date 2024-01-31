@@ -1,0 +1,12 @@
+@use 'node_modules/@carbon/styles/scss/colors';
+@use 'node_modules/@carbon/styles/scss/spacing';
+@use 'node_modules/@carbon/styles/scss/type/index';
+@use '@carbon/styles/scss/type';
+
+.container {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.listHeading {
+  @include type.type-style('heading-04');
+}

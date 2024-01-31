@@ -1,7 +1,12 @@
-import { getAsyncLifecycle, defineConfigSchema } from "@openmrs/esm-framework";
+import {
+  getAsyncLifecycle,
+  getSyncLifecycle,
+  defineConfigSchema,
+} from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
+import { createDashboardLink } from "./create-dashboard-link.component";
 
-const moduleName = "@ugandaemr/esm-template-app";
+const moduleName = "@ugandaemr/esm-alis-app";
 
 const options = {
   featureName: "root",
@@ -21,5 +26,14 @@ export function startupApp() {
 
 export const root = getAsyncLifecycle(
   () => import("./root.component"),
+  options
+);
+
+export const alisDashboardLink = getSyncLifecycle(
+  createDashboardLink({
+    name: "alis",
+    slot: "alis-dashboard-slot",
+    title: "ALIS",
+  }),
   options
 );
