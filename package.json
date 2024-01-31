@@ -1,13 +1,13 @@
 {
-  "name": "@ugandaemr/esm-template-app",
+  "name": "@ugandaemr/esm-alis-app",
   "version": "1.0.0",
   "license": "MPL-2.0",
-  "description": "A template for creating frontend modules for UgandaEMR",
-  "browser": "dist/esm-ugandaemr-template-app.js",
+  "description": "An app for handling all ALIS related functionalities",
+  "browser": "dist/esm-alis-app.js",
   "main": "src/index.ts",
   "source": true,
   "scripts": {
-    "start": "openmrs develop",
+    "start": "openmrs develop --backend http://194.163.171.253:8282",
     "serve": "webpack serve --mode=development",
     "build": "webpack --mode production",
     "analyze": "webpack --mode=production --env analyze=true",
@@ -34,14 +34,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mets-programme/esm-ugandaemr-template-app.git"
+    "url": "git+https://github.com/mets-programme/esm-alis-app.git"
   },
-  "homepage": "https://github.com/mets-programme/esm-ugandaemr-template-app#readme",
+  "homepage": "https://github.com/mets-programme/esm-alis-app#readme",
   "publishConfig": {
     "access": "public"
   },
   "bugs": {
-    "url": "https://github.com/mets-programme/esm-ugandaemr-template-app/issues"
+    "url": "https://github.com/mets-programme/esm-alis-app/issues"
   },
   "dependencies": {
     "@carbon/react": "^1.33.1",
@@ -79,6 +79,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-ts-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "file-saver": "^2.0.5",
     "husky": "^8.0.0",
     "i18next": "^23.2.8",
     "i18next-parser": "^8.0.0",

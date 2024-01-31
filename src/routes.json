@@ -4,10 +4,21 @@
     "fhir2": "^1.2.0",
     "webservices.rest": "^2.24.0"
   },
-  "pages": [
+  "extensions": [{
+    "component": "root",
+    "name": "alis-dashboard",
+    "slot": "alis-dashboard-slot"
+  },
     {
-      "component": "root",
-      "route": "root"
+      "name": "alis-dashboard-link",
+      "component": "alisDashboardLink",
+      "slot": "homepage-dashboard-slot",
+      "order": 5,
+      "meta": {
+        "name": "alis",
+        "slot": "alis-dashboard-slot",
+        "title": "ALIS"
+      }
     }
   ]
 }
